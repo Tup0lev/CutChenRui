@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="切包子ÏÏ"> 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="screen-orientation" content="landscape">
+<meta name="full-screen" content="yes">
+<meta name="x5-orientation" content="landscape">
+<meta name="x5-fullscreen" content="true">
+<link rel="shortcut icon" href="images/logo.png">
+<title>切陈睿</title>
+<style>
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background: #000;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#container{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1281px) {
+  #container{
+    width: 1280px;
+  }
+}
+@media screen and (min-height: 1281px) {
+  #container{
+    height: 1280px;
+  }
+}
+
+#extra{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+#extra .layer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  font-size: small;
+  z-index: 999;
+}
+#footer a {
+  margin: 0 10px;
+  width: 100px;
+  text-decoration: none;
+}
+#footer a, #footer a:visited {
+  color: rgb(198, 9, 64);
+}
+
+#play-button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+#play-button div {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 86px solid #000;
+  margin-top: -50px;
+  margin-left: -40px;
+}
+#play-button:hover {
+  opacity: 0.75;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="extra"></div>
+</div>
+<div id="play-button" style="display:none">
+<div></div>
+
+<script src="scripts/require.js"></script>
+<script src="scripts/animation.js"></script>
+<script src="scripts/collision.js"></script>
+<script src="scripts/drag.js"></script>
+<script src="scripts/flash.js"></script>
+<script src="scripts/fruit.js"></script>
+<script src="scripts/fruit-manager.js"></script>
+<script src="scripts/game.js"></script>
+<script src="scripts/juice.js"></script>
+<script src="scripts/knife.js"></script>
+<script src="scripts/layer.js"></script>
+<script src="scripts/layout.js"></script>
+<script src="scripts/light.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/rotation.js"></script>
+<script src="scripts/scene.js"></script>
+<script src="scripts/sound.js"></script>
+<script src="scripts/sound-manager.js"></script>
+<script src="scripts/timeline.js"></script>
+<script src="scripts/tools.js"></script>
+<script src="scripts/lib/raphael.js"></script>
+<script src="scripts/lib/tween.js"></script>
+<script src="scripts/object/background.js"></script>
+<script src="scripts/object/game-over.js"></script>
+<script src="scripts/object/logo.js"></script>
+<script src="scripts/object/mistake.js"></script>
+<script src="scripts/object/new-game.js"></script>
+<script src="scripts/object/score.js"></script>
+<script>
+document.body.onselectstart = function() {
+  return false;
+};
+require("scripts/main").start();
+</script>
+</body>
+</html>
